@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='heart_disease_icon.png') }}">
+  <title>CardioSense</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" />
+</head>
+
+<body>
+
+<div class="bg-layer" aria-hidden="true">
+  <div class="bg-grad"></div>
+  <div class="bg-dots"></div>
+</div>
+
+<nav>
+  <div class="nav-w">
+    <a href="/" class="logo">
+      <div class="logo-box">❤️</div>
+      <span class="logo-text">Cardio<em>Sense</em></span>
+    </a>
+    <div class="nav-right">
+      <span class="nav-caption">FYP — Swat Heart Disease Prediction</span>
+      <span class="live-pill"><span class="ld"></span>Live</span>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-w">
+
+    <div>
+      <div class="badge">
+        <span class="bp"></span>
+        AI-Powered Cardiac Risk Assessment
+      </div>
+
+      <h1 class="ht">
+        Know Your Heart.<br>
+        <span class="grd">Before It Speaks.</span>
+      </h1>
+
+      <div class="ecg-wrap" aria-hidden="true">
+        <svg class="ecg-svg" viewBox="0 0 900 48"
+             preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <path id="ecgPath" d="
+            M 0,24 L 30,24
+            C 37,24 43,16 50,24
+            L 63,24 L 66,30 L 70,4 L 74,45 L 78,19 L 82,24
+            L 93,24 C 103,24 115,9 124,24 L 225,24
+            L 255,24 C 262,24 268,16 275,24
+            L 288,24 L 291,30 L 295,4 L 299,45 L 303,19 L 307,24
+            L 318,24 C 328,24 340,9 349,24 L 450,24
+            L 480,24 C 487,24 493,16 500,24
+            L 513,24 L 516,30 L 520,4 L 524,45 L 528,19 L 532,24
+            L 543,24 C 553,24 565,9 574,24 L 675,24
+            L 705,24 C 712,24 718,16 725,24
+            L 738,24 L 741,30 L 745,4 L 749,45 L 753,19 L 757,24
+            L 768,24 C 778,24 790,9 799,24 L 900,24
+          "/>
+        </svg>
+      </div>
+
+      <p class="sub">
+        Trained on real Swat region patient data. Two intelligent interfaces —
+        one for doctors with full clinical features, one for patients
+        using plain everyday language.
+      </p>
+
+      <div class="cards-grid">
+        <a href="/patient" class="rcard pat"
+           aria-label="Patient interface – plain language heart risk assessment">
+          <div class="ci"><i class="bi bi-person-heart"></i></div>
+          <div class="clbl">Patient Interface</div>
+          <div class="ct">For Patients</div>
+          <div class="cd">Simple questions in plain language. No medical background needed. Supports Urdu &amp; English.</div>
+          <div class="cc">Enter <span class="arr">→</span></div>
+        </a>
+        <a href="/doctor" class="rcard doc"
+           aria-label="Doctor interface – full clinical diagnostic dashboard">
+          <div class="ci"><i class="bi bi-clipboard2-pulse-fill"></i></div>
+          <div class="clbl">Clinical Interface</div>
+          <div class="ct">For Doctors</div>
+          <div class="cd">Full diagnostic dashboard with all 11 clinical features, analytics &amp; model settings.</div>
+          <div class="cc">Enter <span class="arr">→</span></div>
+        </a>
+      </div>
+
+      <div class="stats">
+        <div>
+          <div class="sn" data-to="380">0</div>
+          <div class="sl">Training Records</div>
+        </div>
+        <div>
+          <div class="sn" data-to="94" data-sfx="%">0<span class="a">%</span></div>
+          <div class="sl">Clinical Accuracy</div>
+        </div>
+        <div>
+          <div class="sn" data-to="2" data-sfx="×">0<span class="a">×</span></div>
+          <div class="sl">ML Models</div>
+        </div>
+        <div>
+          <div class="sn" data-to="11">0</div>
+          <div class="sl">Diagnostic Features</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="vis">
+
+      <div class="gc">
+        <div class="gc-hd">
+          <span class="gc-title">Model Status</span>
+          <span class="live-pill"><span class="ld"></span>Live</span>
+        </div>
+
+        <div class="monitor">
+          <div class="mon-hd">
+            <span class="ld"></span>
+            <span class="mon-lbl">ECG Monitor</span>
+            <span class="mon-bpm">72 BPM</span>
+          </div>
+          <div class="mon-svg-wrap">
+            <svg class="mon-svg" viewBox="0 0 1000 44"
+                 preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+              <path id="monPath" d="
+                M 0,22
+                L 30,22 C 37,22 42,14 48,22
+                L 60,22 L 63,27 L 67,3 L 71,42 L 75,18 L 78,22
+                L 88,22 C 98,22 110,8 118,22 L 250,22
+                L 280,22 C 287,22 292,14 298,22
+                L 310,22 L 313,27 L 317,3 L 321,42 L 325,18 L 328,22
+                L 338,22 C 348,22 360,8 368,22 L 500,22
+                L 530,22 C 537,22 542,14 548,22
+                L 560,22 L 563,27 L 567,3 L 571,42 L 575,18 L 578,22
+                L 588,22 C 598,22 610,8 618,22 L 750,22
+                L 780,22 C 787,22 792,14 798,22
+                L 810,22 L 813,27 L 817,3 L 821,42 L 825,18 L 828,22
+                L 838,22 C 848,22 860,8 868,22 L 1000,22
+              "/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="risk-lbl">Risk Distribution in Training Dataset</div>
+        <div class="rbar">
+          <div class="rs g" style="flex:2"></div>
+          <div class="rs g" style="flex:1.5"></div>
+          <div class="rs a" style="flex:1"></div>
+          <div class="rs a" style="flex:1"></div>
+          <div class="rs r" style="flex:1.3"></div>
+          <div class="rs r" style="flex:1.3"></div>
+          <div class="rs r" style="flex:.7"></div>
+          <div class="rs e" style="flex:1.1"></div>
+          <div class="rs e" style="flex:1.1"></div>
+        </div>
+        <div class="risk-meta">
+          <span>No Disease (46%)</span>
+          <span>Heart Disease (54%)</span>
+        </div>
+
+        <div class="ftags">
+          <span class="ft on">Age</span>
+          <span class="ft on">Blood Pressure</span>
+          <span class="ft on">Diabetes</span>
+          <span class="ft on">Family History</span>
+          <span class="ft">ECG</span>
+          <span class="ft">Troponin</span>
+          <span class="ft">Angiography</span>
+          <span class="ft">RWMA</span>
+          <span class="ft">Physical Activity</span>
+          <span class="ft">Cholesterol</span>
+          <span class="ft">Smoking</span>
+        </div>
+      </div>
+
+      <div class="gc">
+        <div class="gc-hd">
+          <span class="gc-title">Deployed Models</span>
+        </div>
+
+        <div class="me">
+          <div class="mi g">✓</div>
+          <div>
+            <div class="mn">Neural Network (ANN) — Doctor</div>
+            <div class="mm">94% accuracy · AUC 0.96 · 11 features</div>
+          </div>
+        </div>
+        <div class="me">
+          <div class="mi b">✓</div>
+          <div>
+            <div class="mn">Decision Tree — Patient</div>
+            <div class="mm">7 simplified features · plain language</div>
+          </div>
+        </div>
+
+        <div class="arow">
+          <div class="albl"><span>Doctor Model (ANN)</span><span>94%</span></div>
+          <div class="ab"><div class="af red" style="width:94%"></div></div>
+          <div class="albl"><span>Patient Model (DT)</span><span>64.5%</span></div>
+          <div class="ab"><div class="af blue" style="width:64.5%"></div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 CardioSense &nbsp;·&nbsp; Final Year Project &nbsp;·&nbsp; Swat Heart Disease Risk Assessment System
+</footer>
+
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>

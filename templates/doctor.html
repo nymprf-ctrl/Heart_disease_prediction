@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="icon" type="image/png" href="{{ url_for('static', filename='heart_disease_icon.png') }}">
+  <title>Doctor</title>
+
+  <script>
+    if (localStorage.getItem('cs-theme') === 'light')
+      document.documentElement.classList.add('light');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Syne:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/doctor.css') }}" />
+</head>
+
+<body>
+
+  <div class="sb-overlay" id="sbOverlay" onclick="closeSidebar()"></div>
+
+  <aside class="sb" id="sidebar">
+    <a href="/" class="sb-brand">
+      <div class="logo-pulse-wrap">
+        <div class="bi-wrap">
+          <svg class="heart-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 21
+              C10.5 19.5 8 17.5 6 15.5
+              C4 13.5 2.5 11 2.5 8.5
+              C2.5 6 4.3 4.2 6.8 4.2
+              C8.2 4.2 9.5 4.9 10.5 6
+              C10.5 5 11.2 4.3 12.2 4
+              C12.8 3.8 13.8 4 14.5 4.8
+              C16 4 18 4.5 19.5 5.8
+              C21 7.2 21.5 9.8 20.5 12.5
+              C19.5 15.5 16.5 18.5 12 21Z"
+              fill="rgba(255,255,255,0.95)"/>
+            <path d="M10.5 6 C9.5 4.2 10 2.8 11.5 2.3 C12.5 2 13.2 2.5 13 4"
+              stroke="rgba(255,255,255,0.92)" stroke-width="1.8"
+              stroke-linecap="round" fill="none"/>
+            <path d="M14.5 4.8 C15 3.4 16.2 3 17.2 3.7"
+              stroke="rgba(255,255,255,0.72)" stroke-width="1.2"
+              stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
+      </div>
+      <div>
+        <div class="bn">Cardio<em>Sense</em></div>
+        <div class="bsub">Doctor Interface</div>
+      </div>
+    </a>
+
+    <div class="slbl">Navigation</div>
+    <nav class="snav">
+      <button class="ni active" id="nav-assess" onclick="showPage('assess')">
+        <i class="bi bi-clipboard2-pulse"></i> Risk Assessment
+      </button>
+      <a href="/" class="ni"><i class="bi bi-house"></i> Home</a>
+    </nav>
+
+    <div class="slbl">Switch Interface</div>
+    <a href="/patient" class="sp-card">
+      <div class="sp-i"><i class="bi bi-person-heart"></i></div>
+      <div>
+        <div class="sp-lbl">Patient Portal</div>
+        <div class="sp-nm">Non-Technical →</div>
+      </div>
+    </a>
+
+    <div class="sb-foot">
+      <div class="dbadge">
+        <div class="dav">🧠</div>
+        <div>
+          <div style="font-size:.73rem;font-weight:600;">Neural Network (ANN)</div>
+          <div style="font-size:.62rem;color:var(--mute);">94% · 11 features</div>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="mc">
+
+   
+    <header class="tb">
+      <div class="tb-left">
+        <button class="hamburger" id="hamburger" onclick="toggleSidebar()" aria-label="Open menu">
+          <i class="bi bi-list"></i>
+        </button>
+        <div>
+          <div class="tb-t" id="tb-title">Technical Interface — Risk Assessment</div>
+          <div class="tb-bc">Swat Heart Disease Dataset · Neural Network</div>
+        </div>
+      </div>
+      <div class="tb-right">
+        <div class="s-badge"><span class="sdot"></span>Model Active</div>
+        <button class="theme-btn" id="themeBtn" onclick="toggleTheme()"
+                title="Toggle light / dark mode" aria-label="Toggle theme">
+          <i class="bi bi-sun-fill" id="themeIcon"></i>
+        </button>
+        <a href="/" class="portal-btn"><i class="bi bi-arrow-left"></i> Portal</a>
+      </div>
+    </header>
+
+    <div class="ecg-strip-wrap" aria-hidden="true">
+      <svg class="ecg-strip-svg" viewBox="0 0 1000 13"
+           preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="ecg-strip-path" d="
+          M 0,6.5
+          L 28,6.5 C 34,6.5 38,4 42,6.5 L 53,6.5 L 55,8.5 L 58,1 L 61,12 L 64,4.5 L 67,6.5
+          L 76,6.5 C 84,6.5 93,2.5 99,6.5 L 250,6.5
+          L 278,6.5 C 284,6.5 288,4 292,6.5 L 303,6.5 L 305,8.5 L 308,1 L 311,12 L 314,4.5 L 317,6.5
+          L 326,6.5 C 334,6.5 343,2.5 349,6.5 L 500,6.5
+          L 528,6.5 C 534,6.5 538,4 542,6.5 L 553,6.5 L 555,8.5 L 558,1 L 561,12 L 564,4.5 L 567,6.5
+          L 576,6.5 C 584,6.5 593,2.5 599,6.5 L 750,6.5
+          L 778,6.5 C 784,6.5 788,4 792,6.5 L 803,6.5 L 805,8.5 L 808,1 L 811,12 L 814,4.5 L 817,6.5
+          L 826,6.5 C 834,6.5 843,2.5 849,6.5 L 1000,6.5
+        "/>
+      </svg>
+    </div>
+
+    <div class="pg active" id="pg-assess">
+
+      {% if error %}
+      <div class="err-alert"><i class="bi bi-exclamation-triangle-fill"></i> {{ error }}</div>
+      {% endif %}
+
+    
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-md-3">
+          <div class="sc" style="--sc-accent: linear-gradient(90deg,#ff5263,#ff8a92);">
+            <div class="si" style="background:rgba(255,82,99,.12);color:#ff5263;">
+              <i class="bi bi-clipboard2-pulse"></i>
+            </div>
+            <div class="snum">11</div>
+            <div class="slb">Features</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="sc" style="--sc-accent: linear-gradient(90deg,#22c55e,#86efac);">
+            <div class="si" style="background:rgba(34,197,94,.12);color:#4ade80;">
+              <i class="bi bi-cpu"></i>
+            </div>
+            <div class="snum">94%</div>
+            <div class="slb">Accuracy</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="sc" style="--sc-accent: linear-gradient(90deg,#3b82f6,#93c5fd);">
+            <div class="si" style="background:rgba(59,130,246,.12);color:#60a5fa;">
+              <i class="bi bi-database"></i>
+            </div>
+            <div class="snum">380</div>
+            <div class="slb">Training Records</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="sc" style="--sc-accent: linear-gradient(90deg,#f59e0b,#fcd34d);">
+            <div class="si" style="background:rgba(245,158,11,.12);color:#fbbf24;">
+              <i class="bi bi-graph-up"></i>
+            </div>
+            <div class="snum">0.96</div>
+            <div class="slb">AUC Score</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+
+
+        <div class="col-lg-8">
+          <div class="fc">
+            <div class="fch">
+              <div>
+                <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:.93rem;">
+                  Patient Clinical Data Entry
+                </div>
+                <div style="font-size:.69rem;color:var(--mute);margin-top:2px;">
+                  Select all fields — Neural Network model (Swat dataset)
+                </div>
+              </div>
+              <span class="tag tl"><i class="bi bi-lock-fill"></i> Clinical Only</span>
+            </div>
+            <div class="fcb">
+              <form id="techForm" method="POST" action="/predict_doctor">
+
+
+                <input type="hidden" name="sex"      id="h_sex" />
+                <input type="hidden" name="BP"       id="h_bp" />
+                <input type="hidden" name="diabetes" id="h_diab" />
+                <input type="hidden" name="fhist"    id="h_fh" />
+                <input type="hidden" name="act"      id="h_act" />
+                <input type="hidden" name="cp"       id="h_cp" />
+                <input type="hidden" name="ecg"      id="h_ecg" />
+                <input type="hidden" name="rwma"     id="h_rwma" />
+                <input type="hidden" name="trop"     id="h_trop" />
+                <input type="hidden" name="angio"    id="h_angio" />
+
+        
+                <div class="sh">
+                  <span>Demographics &amp; Vitals</span>
+                  <span class="tag tv ms-auto">Vitals</span>
+                </div>
+                <div class="row g-3 mb-4">
+                  <div class="col-md-3">
+                    <label class="flbl">Age (years)</label>
+                    <input type="number" name="age" class="ni-inp"
+                      placeholder="e.g. 65" min="1" max="120" required
+                      value="{{ request.form.get('age','') if request is defined else '' }}" />
+                  </div>
+                  <div class="col-md-4">
+                    <label class="flbl">Sex</label>
+                    <div class="sbg" id="g-sex">
+                      <label class="btn-sel {% if request is defined and request.form.get('sex')=='1' %}s-b{% endif %}"
+                             onclick="pick('sex','1','s-b',this)">
+                        <input type="radio" name="_sex" value="1"
+                          {% if request is defined and request.form.get('sex')=='1' %}checked{% endif %} />♂ Male
+                      </label>
+                      <label class="btn-sel {% if request is defined and request.form.get('sex')=='0' %}s-p{% endif %}"
+                             onclick="pick('sex','0','s-p',this)">
+                        <input type="radio" name="_sex" value="0"
+                          {% if request is defined and request.form.get('sex')=='0' %}checked{% endif %} />♀ Female
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-5">
+                    <label class="flbl">Blood Pressure</label>
+                    <div class="sbg" id="g-bp">
+                      <label class="btn-sel {% if request is defined and request.form.get('BP')=='0' %}s-g{% endif %}"
+                             onclick="pick('bp','0','s-g',this)">
+                        <input type="radio" name="_bp" />Normal
+                      </label>
+                      <label class="btn-sel {% if request is defined and request.form.get('BP')=='1' %}s-o{% endif %}"
+                             onclick="pick('bp','1','s-o',this)">
+                        <input type="radio" name="_bp" />Low
+                      </label>
+                      <label class="btn-sel {% if request is defined and request.form.get('BP')=='2' %}s-r{% endif %}"
+                             onclick="pick('bp','2','s-r',this)">
+                        <input type="radio" name="_bp" />High
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="flbl">Diabetes</label>
+                    <div class="sbg" id="g-diab">
+                      <label class="btn-sel {% if request is defined and request.form.get('diabetes')=='1' %}s-r{% endif %}"
+                             onclick="pick('diab','1','s-r',this)">
+                        <input type="radio" name="_diab" />Yes
+                      </label>
+                      <label class="btn-sel {% if request is defined and request.form.get('diabetes')=='0' %}s-g{% endif %}"
+                             onclick="pick('diab','0','s-g',this)">
+                        <input type="radio" name="_diab" />No
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="flbl">Family History</label>
+                    <div class="sbg" id="g-fh">
+                      <label class="btn-sel {% if request is defined and request.form.get('fhist')=='1' %}s-r{% endif %}"
+                             onclick="pick('fh','1','s-r',this)">
+                        <input type="radio" name="_fh" />Yes
+                      </label>
+                      <label class="btn-sel {% if request is defined and request.form.get('fhist')=='0' %}s-g{% endif %}"
+                             onclick="pick('fh','0','s-g',this)">
+                        <input type="radio" name="_fh" />No
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+
+                    <label class="flbl">Physical Activity</label>
+                    <div class="sbg" id="g-act">
+                      <label class="btn-sel {% if request is defined and request.form.get('act')=='2' %}s-r{% endif %}"
+                             onclick="pick('act','2','s-r',this)">
+                        <input type="radio" name="_act" />Low
+                      </label>
+                      <label class="btn-sel {% if request is defined and request.form.get('act')=='1' %}s-o{% endif %}"
+                             onclick="pick('act','1','s-o',this)">
+                        <input type="radio" name="_act" />Moderate
+                      </label>
+                      <label class="btn-sel {% if request is defined and request.form.get('act')=='0' %}s-g{% endif %}"
+                             onclick="pick('act','0','s-g',this)">
+                        <input type="radio" name="_act" />High
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sh">
+                  <span>Cardiac History</span>
+                  <span class="tag tc ms-auto">Cardiac</span>
+                </div>
+                <div class="row g-3 mb-4">
+                  <div class="col-12">
+                    <label class="flbl">Chest Pain Type</label>
+                    <div class="sbg" id="g-cp">
+                      <label class="btn-sel {% if request is defined and request.form.get('cp')=='0' %}s-g{% endif %}"
+                             onclick="pick('cp','0','s-g',this)">
+                        <input type="radio" name="_cp" />No Angina
+                      </label>
+                      <label class="btn-sel {% if request is defined and request.form.get('cp')=='1' %}s-o{% endif %}"
+                             onclick="pick('cp','1','s-o',this)">
+                        <input type="radio" name="_cp" />Stable Angina
+                      </label>
+                      <label class="btn-sel {% if request is defined and request.form.get('cp')=='2' %}s-r{% endif %}"
+                             onclick="pick('cp','2','s-r',this)">
+                        <input type="radio" name="_cp" />Unstable Angina
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sh">
+                  <span>Diagnostic Test Results</span>
+                  <span class="tag tl ms-auto">Clinical</span>
+                </div>
+                <div class="row g-3 mb-4">
+                  <div class="col-12">
+                    <label class="flbl">ECG Result</label>
+                    <div class="sbg" id="g-ecg">
+                      <label class="btn-sel {% if request is defined and request.form.get('ecg')=='0' %}s-g{% endif %}"
+                             onclick="pick('ecg','0','s-g',this)">
+                        <input type="radio" name="_ecg" />Normal
+                      </label>
+                      <label class="btn-sel {% if request is defined and request.form.get('ecg')=='1' %}s-o{% endif %}"
+                             onclick="pick('ecg','1','s-o',this)">
+                        <input type="radio" name="_ecg" />ST Depression
+                      </label>
+                      <label class="btn-sel {% if request is defined and request.form.get('ecg')=='2' %}s-r{% endif %}"
+                             onclick="pick('ecg','2','s-r',this)">
+                        <input type="radio" name="_ecg" />ST Elevation
+                      </label>
+                      <label class="btn-sel {% if request is defined and request.form.get('ecg')=='3' %}s-r{% endif %}"
+                             onclick="pick('ecg','3','s-r',this)">
+                        <input type="radio" name="_ecg" />T-wave Inversion
+                      </label>
+                      <label class="btn-sel {% if request is defined and request.form.get('ecg')=='4' %}s-r{% endif %}"
+                             onclick="pick('ecg','4','s-r',this)">
+                        <input type="radio" name="_ecg" />Complete Heart Block
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="flbl">RWMA</label>
+                    <div class="sbg" id="g-rwma">
+                      <label class="btn-sel {% if request is defined and request.form.get('rwma')=='0' %}s-g{% endif %}"
+                             onclick="pick('rwma','0','s-g',this)">
+                        <input type="radio" name="_rwma" />No
+                      </label>
+                      <label class="btn-sel {% if request is defined and request.form.get('rwma')=='1' %}s-r{% endif %}"
+                             onclick="pick('rwma','1','s-r',this)">
+                        <input type="radio" name="_rwma" />Present
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-8">
+                    <label class="flbl">Troponin (Trop)</label>
+                    <div class="sbg" id="g-trop">
+                      <label class="btn-sel {% if request is defined and request.form.get('trop')=='0' %}s-b{% endif %}"
+                             onclick="pick('trop','0','s-b',this)">
+                        <input type="radio" name="_trop" />— Not Done
+                      </label>
+                      <label class="btn-sel {% if request is defined and request.form.get('trop')=='1' %}s-g{% endif %}"
+                             onclick="pick('trop','1','s-g',this)">
+                        <input type="radio" name="_trop" />✓ Negative
+                      </label>
+                      <label class="btn-sel {% if request is defined and request.form.get('trop')=='2' %}s-r{% endif %}"
+                             onclick="pick('trop','2','s-r',this)">
+                        <input type="radio" name="_trop" />⚠ Positive
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label class="flbl">Angiography</label>
+                    <div class="sbg" id="g-angio">
+                      <label class="btn-sel {% if request is defined and request.form.get('angio')=='0' %}s-g{% endif %}"
+                             onclick="pick('angio','0','s-g',this)">
+                        <input type="radio" name="_angio" />Normal
+                      </label>
+                      <label class="btn-sel {% if request is defined and request.form.get('angio')=='1' %}s-o{% endif %}"
+                             onclick="pick('angio','1','s-o',this)">
+                        <input type="radio" name="_angio" />Single Vessel Disease
+                      </label>
+                      <label class="btn-sel {% if request is defined and request.form.get('angio')=='2' %}s-o{% endif %}"
+                             onclick="pick('angio','2','s-o',this)">
+                        <input type="radio" name="_angio" />Double Vessel Disease
+                      </label>
+                      <label class="btn-sel {% if request is defined and request.form.get('angio')=='3' %}s-r{% endif %}"
+                             onclick="pick('angio','3','s-r',this)">
+                        <input type="radio" name="_angio" />Triple Vessel Disease
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3 flex-wrap">
+                  <button type="submit" class="btn-pr" id="submitBtn">
+                    <i class="bi bi-cpu-fill"></i> Run Prediction
+                    <span class="sp-wr" id="spinner">
+                      <span class="spinner-border spinner-border-sm"></span>
+                    </span>
+                  </button>
+                  <button type="button" class="btn-rs" onclick="clearForm()">
+                    <i class="bi bi-arrow-counterclockwise"></i> Reset
+                  </button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4">
+          <div style="font-family:'Syne',sans-serif;font-size:.72rem;font-weight:700;
+                      text-transform:uppercase;letter-spacing:.08em;color:var(--mute);
+                      margin-bottom:.85rem;">Prediction Result</div>
+
+          <div class="rc pend show" id="rc-pend">
+            <div style="display:flex;align-items:center;gap:.68rem;color:var(--mute);">
+              <i class="bi bi-hourglass" style="font-size:1.35rem;"></i>
+              <div>
+                <div style="font-weight:600;color:var(--txt);font-size:.86rem;">Awaiting Input</div>
+                <div style="font-size:.73rem;margin-top:2px;">Fill the form and submit to see prediction.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rc" id="rc-result">
+            <div style="display:flex;align-items:center;gap:.58rem;margin-bottom:.85rem;">
+              <div id="r-icon" style="font-size:1.55rem;"></div>
+              <div>
+                <div class="rt" id="r-label"></div>
+                <div style="font-size:.7rem;color:var(--mute);margin-top:2px;" id="r-sub"></div>
+              </div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font-size:.68rem;color:var(--mute);margin-bottom:.32rem;">
+              <span>Model Confidence</span><span id="r-confv"></span>
+            </div>
+            <div class="cbb"><div class="cbf" id="r-confb" style="width:0%;"></div></div>
+            <div style="margin-top:.65rem;display:flex;gap:.5rem;flex-wrap:wrap;font-size:.72rem;color:var(--mute);">
+              <span>P(Disease):</span>
+              <span id="r-pyes" style="color:var(--txt);font-weight:600;"></span>
+              <span style="margin-left:.5rem;">P(No Disease):</span>
+              <span id="r-pno"  style="color:var(--txt);font-weight:600;"></span>
+            </div>
+            <div id="r-note"
+                 style="font-size:.74rem;color:var(--mute);margin-top:.68rem;line-height:1.65;
+                        padding-top:.65rem;border-top:1px solid var(--bdr);"></div>
+            <div id="r-rec" style="display:none;"></div>
+          </div>
+
+          {% if prediction is defined %}
+          <script>
+            var FORM_VALS = {
+              sex:   '{{ request.form.get("sex",   "") }}',
+              bp:    '{{ request.form.get("BP",    "") }}',
+              diab:  '{{ request.form.get("diabetes","") }}',
+              fh:    '{{ request.form.get("fhist", "") }}',
+              act:   '{{ request.form.get("act",   "") }}',
+              cp:    '{{ request.form.get("cp",    "") }}',
+              ecg:   '{{ request.form.get("ecg",   "") }}',
+              rwma:  '{{ request.form.get("rwma",  "") }}',
+              trop:  '{{ request.form.get("trop",  "") }}',
+              angio: '{{ request.form.get("angio", "") }}'
+            };
+            document.addEventListener('DOMContentLoaded', function () {
+              showResult({{ prediction }}, {{ confidence }}, {{ prob_yes }}, {{ prob_no }});
+              restoreSelections();
+            });
+          </script>
+          {% endif %}
+
+          <div class="ref-card">
+            <div class="ref-title">Dataset Encodings</div>
+            <div class="ref-rows">
+              <div><strong>BP</strong>: Normal=0 · Low=1 · High=2</div>
+              <div><strong>Activity</strong>: High=0 · Moderate=1 · Low=2</div>
+              <div><strong>Trop</strong>: Not Done=0 · Neg=1 · Pos=2</div>
+              <div><strong>Angio</strong>: Normal=0 → Triple=3</div>
+              <div><strong>ECG</strong>: Normal=0 → CHB=4</div>
+            </div>
+          </div>
+
+          <div class="warn-card">
+            <i class="bi bi-exclamation-triangle-fill"></i>
+            <span>Decision support only. Clinical judgment supersedes model output.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='js/doctor.js') }}"></script>
+</body>
+</html>

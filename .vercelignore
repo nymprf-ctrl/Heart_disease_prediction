@@ -1,0 +1,13 @@
+# Local dev / IDE - never needed at runtime
+.venv/
+.idea/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Model-comparison notebooks and result images (research artifacts, not
+# used by app.py) - keep these out of the deployed function to keep it small
+*.ipynb
+DT/
+NN/
+Non Technical/

@@ -1,0 +1,381 @@
+age,sex,BP,diabetes,fhist,Physical_Activity,cp,ecg,rwma,trop,angio,target
+85,Female,High,Yes,No,High,No Angina,Normal,No,Not Done,Normal,No
+63,Female,Low,Yes,Yes,Low,Stable Angina,Normal,No,Not Done,Normal,No
+77,Female,Normal,Yes,Yes,High,No Angina,Normal,No,Not Done,Normal,No
+77,Female,Normal,Yes,Yes,Moderate,No Angina,ST Elevation,No,Not Done,Double Vessel Disease,Yes
+62,Female,High,Yes,Yes,Moderate,Stable Angina,Normal,yes,Not Done,Double Vessel Disease,Yes
+75,Male,Normal,Yes,Yes,Low,Stable Angina,Normal,No,Not Done,Normal,No
+67,Male,Low,Yes,Yes,High,Stable Angina,Normal,No,Negative,Normal,Yes
+83,Male,High,Yes,Yes,High,Stable Angina,Normal,No,Negative,Normal,No
+49,Female,Low,No,Yes,High,Stable Angina,Normal,No,Negative,Normal,No
+85,Female,Low,No,Yes,High,Unstable Angina,ST Elevation,No,Not Done,Single Vessel Disease,Yes
+26,Male,Low,Yes,Yes,High,Stable Angina,Normal,No,Negative,Normal,No
+75,Female,High,Yes,No,High,Stable Angina,Normal,No,Not Done,Normal,No
+81,Female,Normal,Yes,No,Low,Stable Angina,T-wave Inversion,yes,Not Done,Single Vessel Disease,Yes
+59,Female,High,Yes,Yes,High,Stable Angina,Normal,No,Not Done,Normal,No
+53,Female,Low,No,Yes,High,Stable Angina,T-wave Inversion,yes,Negative,Single Vessel Disease,Yes
+77,Male,High,No,No,Moderate,Stable Angina,Normal,No,Negative,Normal,No
+69,Female,Low,Yes,No,Moderate,Stable Angina,Normal,No,Negative,Normal,No
+85,Male,High,No,No,High,Unstable Angina,ST Elevation,yes,Not Done,Single Vessel Disease,Yes
+85,Female,High,Yes,No,High,Stable Angina,Normal,No,Not Done,Normal,No
+85,Male,Low,Yes,No,Moderate,No Angina,T-wave Inversion,yes,Not Done,Normal,Yes
+85,Female,High,Yes,Yes,Moderate,No Angina,Normal,No,Negative,Normal,Yes
+20,Female,Normal,No,Yes,High,Stable Angina,Normal,No,Not Done,Normal,No
+85,Female,Low,Yes,No,High,No Angina,Normal,No,Not Done,Normal,No
+73,Female,Low,No,Yes,Low,Stable Angina,ST Elevation,yes,Not Done,Normal,Yes
+81,Female,Normal,Yes,No,High,Stable Angina,ST Depression,yes,Not Done,Normal,Yes
+81,Female,Normal,No,Yes,High,Stable Angina,Normal,No,Not Done,Normal,No
+85,Male,High,No,Yes,Low,Unstable Angina,Normal,No,Not Done,Double Vessel Disease,Yes
+80,Male,Normal,No,Yes,High,Unstable Angina,ST Depression,No,Positive,Normal,Yes
+80,Female,Low,Yes,Yes,Moderate,Stable Angina,Normal,No,Negative,Normal,Yes
+85,Female,Low,Yes,Yes,Moderate,Stable Angina,Normal,yes,Not Done,Normal,Yes
+81,Male,High,Yes,No,Moderate,No Angina,Normal,No,Not Done,Normal,No
+85,Female,Low,No,Yes,High,Stable Angina,Normal,No,Negative,Normal,No
+85,Male,High,No,Yes,Low,Unstable Angina,ST Elevation,No,Not Done,Normal,Yes
+69,Female,Low,Yes,No,Moderate,Stable Angina,Normal,No,Negative,Normal,No
+85,Female,Low,Yes,No,Moderate,Stable Angina,Normal,yes,Negative,Normal,Yes
+85,Female,Normal,No,Yes,Moderate,Unstable Angina,Normal,yes,Not Done,Triple Vessel Disease,Yes
+79,Male,Normal,Yes,Yes,High,No Angina,ST Depression,No,Not Done,Normal,Yes
+84,Female,Low,No,Yes,Moderate,Unstable Angina,ST Elevation,No,Not Done,Normal,Yes
+85,Female,Low,Yes,Yes,Moderate,Stable Angina,Normal,yes,Not Done,Normal,Yes
+27,Male,Low,No,No,High,Stable Angina,Normal,No,Not Done,Normal,No
+78,Female,Low,Yes,No,Moderate,Stable Angina,ST Depression,yes,Not Done,Triple Vessel Disease,Yes
+85,Male,Normal,No,Yes,Low,Stable Angina,Normal,No,Negative,Normal,No
+31,Female,Normal,No,No,Moderate,Stable Angina,ST Elevation,No,Not Done,Normal,Yes
+85,Female,Normal,Yes,Yes,Moderate,Stable Angina,ST Depression,No,Not Done,Normal,Yes
+33,Female,Low,Yes,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+42,Female,Low,Yes,No,Moderate,Stable Angina,Normal,No,Negative,Normal,No
+73,Male,Low,Yes,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+78,Female,High,Yes,No,High,Stable Angina,Normal,No,Not Done,Triple Vessel Disease,Yes
+81,Male,Low,Yes,Yes,Moderate,Stable Angina,Normal,yes,Not Done,Normal,Yes
+39,Female,Low,Yes,No,High,Stable Angina,Normal,No,Negative,Normal,No
+76,Male,Low,No,Yes,Moderate,Stable Angina,T-wave Inversion,yes,Not Done,Normal,Yes
+36,Female,Low,Yes,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+85,Female,High,No,No,Moderate,Stable Angina,Normal,No,Negative,Normal,No
+54,Female,Low,No,Yes,Low,Stable Angina,Normal,No,Not Done,Normal,No
+80,Female,Low,No,Yes,High,Stable Angina,Normal,No,Not Done,Normal,No
+85,Male,High,Yes,Yes,Low,Stable Angina,ST Depression,No,Not Done,Normal,Yes
+60,Male,Low,Yes,No,Moderate,No Angina,Normal,No,Not Done,Single Vessel Disease,Yes
+76,Female,High,No,No,Low,No Angina,T-wave Inversion,No,Not Done,Normal,Yes
+25,Female,Low,No,Yes,High,Stable Angina,Normal,No,Negative,Normal,No
+85,Female,Low,Yes,No,Moderate,Stable Angina,Normal,yes,Negative,Triple Vessel Disease,Yes
+85,Male,Normal,Yes,No,Moderate,No Angina,ST Elevation,No,Negative,Single Vessel Disease,Yes
+20,Female,High,Yes,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+67,Female,Normal,No,No,High,No Angina,Normal,No,Not Done,Normal,Yes
+82,Female,Normal,Yes,No,Low,Stable Angina,ST Depression,No,Positive,Triple Vessel Disease,Yes
+84,Female,Low,Yes,Yes,High,Stable Angina,Normal,No,Negative,Normal,No
+31,Female,High,Yes,No,Moderate,Stable Angina,ST Elevation,yes,Not Done,Single Vessel Disease,Yes
+85,Male,High,Yes,No,Low,Stable Angina,Normal,No,Not Done,Normal,No
+66,Female,Low,No,Yes,Moderate,Stable Angina,T-wave Inversion,No,Not Done,Single Vessel Disease,Yes
+85,Female,Low,No,Yes,Moderate,Stable Angina,ST Elevation,yes,Not Done,Normal,Yes
+85,Male,Low,Yes,No,High,Stable Angina,Normal,No,Not Done,Normal,No
+39,Female,Normal,No,Yes,Moderate,No Angina,Normal,No,Not Done,Normal,No
+84,Male,High,Yes,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+72,Female,Normal,No,No,Moderate,Stable Angina,ST Depression,yes,Not Done,Triple Vessel Disease,Yes
+65,Female,Normal,No,No,Moderate,No Angina,Normal,No,Negative,Normal,No
+85,Female,Low,Yes,No,Moderate,No Angina,Normal,yes,Not Done,Normal,Yes
+77,Female,Low,Yes,Yes,Moderate,Unstable Angina,Normal,No,Not Done,Single Vessel Disease,Yes
+67,Female,High,No,No,Moderate,Stable Angina,ST Elevation,No,Negative,Normal,Yes
+85,Female,Low,Yes,No,Low,Stable Angina,Normal,No,Negative,Normal,No
+75,Female,Low,Yes,No,Low,Stable Angina,Normal,No,Not Done,Normal,No
+51,Male,Low,Yes,Yes,High,Unstable Angina,Complete Heart Block,yes,Negative,Normal,Yes
+56,Female,High,Yes,No,High,Unstable Angina,ST Depression,No,Not Done,Normal,Yes
+85,Male,Low,No,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,Yes
+34,Female,Low,Yes,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+85,Male,Low,Yes,No,High,Stable Angina,Normal,No,Negative,Normal,No
+83,Male,Low,Yes,No,Moderate,No Angina,Normal,No,Negative,Normal,No
+85,Male,Low,Yes,No,Low,Stable Angina,ST Elevation,No,Positive,Normal,Yes
+76,Female,Low,Yes,Yes,Moderate,Stable Angina,ST Elevation,yes,Not Done,Double Vessel Disease,Yes
+82,Female,Low,Yes,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+85,Male,Low,No,No,Moderate,Stable Angina,ST Elevation,No,Not Done,Single Vessel Disease,Yes
+63,Female,High,Yes,No,Low,Stable Angina,ST Elevation,yes,Not Done,Single Vessel Disease,Yes
+63,Female,Normal,No,No,Moderate,Unstable Angina,Complete Heart Block,No,Negative,Single Vessel Disease,Yes
+85,Female,Normal,Yes,Yes,Low,No Angina,Normal,yes,Not Done,Normal,Yes
+85,Male,Low,Yes,Yes,Moderate,Stable Angina,Normal,yes,Negative,Single Vessel Disease,Yes
+28,Male,Normal,Yes,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+83,Female,Low,Yes,Yes,Low,Stable Angina,Normal,No,Negative,Normal,No
+28,Female,High,No,Yes,High,No Angina,Normal,No,Not Done,Normal,No
+81,Male,Low,No,Yes,Moderate,Stable Angina,ST Elevation,yes,Not Done,Normal,Yes
+39,Female,Low,Yes,Yes,High,Stable Angina,Normal,No,Negative,Normal,No
+58,Male,Normal,Yes,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+83,Female,Low,No,No,Moderate,No Angina,Normal,No,Not Done,Normal,No
+85,Male,Low,Yes,No,Moderate,Stable Angina,ST Depression,yes,Negative,Double Vessel Disease,Yes
+85,Female,High,No,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+67,Female,Normal,Yes,Yes,High,Stable Angina,Normal,No,Not Done,Normal,No
+31,Male,Normal,Yes,No,High,Stable Angina,Normal,No,Negative,Normal,Yes
+61,Female,High,No,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+85,Male,Normal,No,No,Moderate,Unstable Angina,ST Depression,No,Positive,Normal,Yes
+82,Female,Normal,Yes,No,Moderate,Stable Angina,ST Depression,No,Not Done,Double Vessel Disease,Yes
+85,Male,High,Yes,Yes,Moderate,No Angina,Normal,No,Not Done,Normal,No
+82,Female,Low,Yes,Yes,High,No Angina,Normal,yes,Negative,Normal,Yes
+31,Female,High,Yes,No,Low,Stable Angina,Complete Heart Block,No,Positive,Normal,Yes
+80,Male,Low,Yes,No,Low,Stable Angina,Normal,No,Not Done,Normal,No
+79,Female,Low,No,Yes,Low,Stable Angina,Normal,No,Negative,Normal,No
+85,Male,High,No,No,Low,Stable Angina,Normal,No,Not Done,Normal,No
+85,Female,Normal,Yes,Yes,Moderate,Stable Angina,ST Elevation,yes,Negative,Double Vessel Disease,Yes
+85,Female,Normal,Yes,No,High,Stable Angina,Normal,No,Not Done,Normal,No
+45,Female,Low,Yes,Yes,Moderate,Stable Angina,Normal,No,Negative,Normal,No
+57,Female,High,Yes,Yes,High,Stable Angina,Normal,No,Not Done,Normal,No
+76,Female,Low,No,No,High,Stable Angina,Normal,No,Negative,Normal,No
+55,Male,Low,Yes,No,Moderate,No Angina,Normal,No,Negative,Normal,No
+61,Male,Normal,No,No,Low,Stable Angina,Normal,No,Not Done,Double Vessel Disease,Yes
+80,Male,High,Yes,No,Moderate,No Angina,T-wave Inversion,No,Negative,Normal,Yes
+78,Female,Low,Yes,Yes,High,Stable Angina,Normal,No,Not Done,Normal,No
+74,Male,Low,Yes,Yes,Low,Stable Angina,Normal,yes,Not Done,Normal,Yes
+81,Male,Normal,No,Yes,Moderate,No Angina,Normal,yes,Not Done,Normal,Yes
+85,Female,Low,No,Yes,Moderate,Stable Angina,Normal,No,Negative,Normal,Yes
+78,Female,Low,Yes,Yes,Moderate,Stable Angina,Normal,yes,Not Done,Triple Vessel Disease,Yes
+85,Female,Low,Yes,No,Moderate,Unstable Angina,T-wave Inversion,yes,Negative,Normal,Yes
+85,Male,High,Yes,Yes,Low,Unstable Angina,ST Elevation,No,Positive,Normal,Yes
+80,Female,Low,Yes,Yes,High,Stable Angina,T-wave Inversion,No,Positive,Normal,Yes
+58,Female,Normal,Yes,No,Moderate,No Angina,Normal,No,Positive,Normal,Yes
+84,Male,High,Yes,No,Low,Stable Angina,Normal,No,Not Done,Normal,No
+83,Male,Normal,No,Yes,High,No Angina,Complete Heart Block,yes,Not Done,Normal,Yes
+63,Female,Low,No,No,Moderate,Stable Angina,Normal,No,Negative,Normal,No
+85,Male,High,No,No,High,No Angina,Normal,No,Not Done,Normal,No
+36,Male,High,No,Yes,High,Stable Angina,Normal,yes,Positive,Normal,Yes
+85,Female,Low,Yes,No,Moderate,Stable Angina,ST Elevation,yes,Not Done,Single Vessel Disease,Yes
+85,Male,Normal,Yes,Yes,Moderate,Stable Angina,ST Depression,No,Not Done,Normal,Yes
+54,Female,Low,Yes,No,Low,Stable Angina,T-wave Inversion,yes,Not Done,Normal,Yes
+85,Female,Normal,No,Yes,Moderate,Stable Angina,ST Depression,yes,Negative,Double Vessel Disease,Yes
+85,Female,High,No,No,High,Unstable Angina,Normal,yes,Positive,Triple Vessel Disease,Yes
+82,Female,Low,No,Yes,Low,Stable Angina,Normal,No,Not Done,Normal,No
+85,Male,Low,Yes,Yes,Moderate,Stable Angina,Normal,No,Negative,Normal,No
+79,Female,High,Yes,No,High,Stable Angina,Normal,No,Not Done,Double Vessel Disease,Yes
+81,Female,Low,No,No,High,No Angina,Complete Heart Block,yes,Negative,Normal,Yes
+66,Female,Low,No,Yes,High,No Angina,Normal,No,Not Done,Normal,Yes
+76,Female,High,Yes,Yes,Low,Stable Angina,Complete Heart Block,yes,Positive,Single Vessel Disease,Yes
+63,Male,Normal,No,Yes,Low,No Angina,Normal,No,Not Done,Normal,No
+85,Female,Low,No,Yes,Moderate,Stable Angina,Normal,No,Negative,Normal,No
+75,Male,Low,Yes,No,High,No Angina,ST Elevation,yes,Not Done,Normal,Yes
+30,Female,Low,Yes,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+85,Male,Normal,No,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+85,Male,Low,Yes,Yes,Low,Stable Angina,Normal,yes,Negative,Normal,Yes
+49,Female,Low,Yes,Yes,High,Unstable Angina,ST Depression,No,Negative,Normal,Yes
+75,Female,Low,Yes,No,High,Stable Angina,ST Elevation,No,Negative,Triple Vessel Disease,Yes
+85,Male,Normal,No,Yes,High,Stable Angina,ST Elevation,yes,Not Done,Normal,Yes
+48,Male,Low,No,No,Moderate,No Angina,Normal,No,Not Done,Normal,No
+85,Female,Normal,No,Yes,Low,No Angina,ST Depression,yes,Not Done,Normal,Yes
+64,Female,High,Yes,Yes,Low,Stable Angina,T-wave Inversion,No,Not Done,Triple Vessel Disease,Yes
+49,Female,Low,Yes,No,High,Unstable Angina,Normal,No,Positive,Normal,Yes
+85,Female,Normal,No,No,High,Stable Angina,ST Elevation,yes,Negative,Normal,Yes
+85,Male,Low,Yes,No,High,Stable Angina,Normal,No,Negative,Normal,Yes
+85,Female,Normal,No,Yes,High,Stable Angina,Normal,No,Not Done,Normal,No
+65,Female,High,Yes,No,Moderate,Stable Angina,Normal,yes,Negative,Triple Vessel Disease,Yes
+70,Male,Low,No,Yes,Moderate,No Angina,Normal,No,Not Done,Normal,No
+80,Female,Low,Yes,No,High,Unstable Angina,ST Depression,No,Not Done,Normal,Yes
+72,Female,Low,No,Yes,Moderate,Stable Angina,T-wave Inversion,yes,Positive,Normal,Yes
+81,Male,Low,No,No,Moderate,Stable Angina,Complete Heart Block,yes,Negative,Normal,Yes
+85,Female,Low,No,No,High,Unstable Angina,T-wave Inversion,yes,Not Done,Normal,Yes
+85,Male,High,Yes,Yes,Low,No Angina,ST Depression,yes,Negative,Normal,Yes
+76,Male,Normal,Yes,No,Low,No Angina,ST Depression,No,Negative,Normal,Yes
+85,Female,Low,Yes,No,High,Stable Angina,ST Elevation,yes,Negative,Normal,Yes
+85,Female,High,No,Yes,Low,Stable Angina,Normal,No,Not Done,Normal,Yes
+85,Male,Normal,Yes,Yes,Moderate,No Angina,ST Elevation,No,Positive,Double Vessel Disease,Yes
+85,Female,High,No,No,Low,No Angina,Normal,No,Not Done,Normal,No
+85,Female,Low,Yes,Yes,Moderate,No Angina,ST Elevation,No,Negative,Single Vessel Disease,Yes
+60,Female,High,Yes,Yes,Low,Stable Angina,Complete Heart Block,No,Not Done,Normal,Yes
+85,Female,Low,No,No,Moderate,Unstable Angina,Complete Heart Block,yes,Positive,Double Vessel Disease,Yes
+50,Male,Normal,Yes,No,High,Stable Angina,Normal,No,Not Done,Normal,No
+75,Male,Normal,Yes,Yes,Moderate,Stable Angina,ST Depression,No,Positive,Single Vessel Disease,Yes
+78,Female,Normal,Yes,No,High,No Angina,Normal,No,Not Done,Normal,No
+83,Female,High,Yes,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+82,Female,Low,Yes,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+69,Female,High,Yes,No,High,Stable Angina,Normal,yes,Negative,Normal,Yes
+64,Male,Normal,Yes,Yes,High,Stable Angina,Normal,No,Not Done,Normal,No
+85,Female,Low,No,No,Low,Unstable Angina,ST Elevation,No,Not Done,Double Vessel Disease,Yes
+81,Female,Low,Yes,No,Low,Stable Angina,Normal,No,Not Done,Normal,No
+56,Male,High,No,Yes,Low,Stable Angina,Normal,No,Not Done,Normal,No
+71,Female,Low,No,No,Moderate,Stable Angina,ST Depression,No,Not Done,Normal,Yes
+73,Female,Normal,Yes,Yes,Low,Stable Angina,Normal,No,Not Done,Normal,No
+85,Male,Low,Yes,Yes,Moderate,No Angina,Normal,yes,Not Done,Normal,Yes
+85,Female,Low,No,No,Moderate,No Angina,ST Elevation,yes,Negative,Normal,Yes
+58,Male,Normal,Yes,Yes,Moderate,Stable Angina,ST Depression,yes,Negative,Normal,Yes
+82,Female,Normal,Yes,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+65,Female,Normal,No,Yes,Low,Stable Angina,T-wave Inversion,yes,Not Done,Normal,Yes
+83,Male,High,Yes,Yes,Low,Stable Angina,Normal,No,Not Done,Normal,No
+69,Male,Low,Yes,No,Moderate,Unstable Angina,Normal,yes,Not Done,Normal,Yes
+85,Female,Low,No,Yes,Moderate,Stable Angina,ST Depression,No,Negative,Triple Vessel Disease,Yes
+47,Female,High,No,No,High,No Angina,Normal,No,Not Done,Normal,No
+73,Female,Low,Yes,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+43,Male,Low,No,No,Low,No Angina,ST Elevation,No,Positive,Normal,Yes
+82,Male,High,No,No,High,Stable Angina,Normal,No,Negative,Normal,No
+85,Male,Normal,No,No,High,Stable Angina,Normal,No,Not Done,Normal,No
+52,Female,High,Yes,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+85,Female,Low,Yes,Yes,Low,No Angina,Normal,No,Negative,Normal,No
+85,Male,Low,No,No,High,Stable Angina,ST Elevation,yes,Not Done,Single Vessel Disease,Yes
+85,Male,High,Yes,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+76,Male,Low,Yes,No,Moderate,No Angina,ST Elevation,yes,Not Done,Normal,Yes
+47,Male,Low,No,No,High,No Angina,Normal,yes,Not Done,Normal,Yes
+76,Male,Low,Yes,Yes,Moderate,Unstable Angina,ST Elevation,No,Not Done,Double Vessel Disease,Yes
+51,Female,Normal,No,Yes,High,Stable Angina,ST Elevation,No,Not Done,Normal,Yes
+23,Female,High,Yes,Yes,Moderate,No Angina,Normal,No,Not Done,Normal,No
+85,Female,Low,Yes,No,Moderate,Unstable Angina,T-wave Inversion,yes,Not Done,Double Vessel Disease,Yes
+79,Male,Low,Yes,Yes,Moderate,Unstable Angina,T-wave Inversion,yes,Not Done,Normal,Yes
+85,Male,Low,Yes,Yes,High,No Angina,ST Elevation,yes,Negative,Normal,Yes
+73,Male,High,Yes,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+85,Female,Normal,Yes,No,High,Stable Angina,Normal,No,Negative,Normal,No
+85,Female,Low,Yes,No,High,No Angina,Normal,yes,Not Done,Normal,Yes
+85,Male,Low,Yes,Yes,Moderate,Stable Angina,ST Depression,No,Not Done,Double Vessel Disease,Yes
+80,Female,Low,No,No,High,Stable Angina,Normal,No,Negative,Normal,No
+66,Female,High,Yes,No,Moderate,No Angina,Normal,No,Negative,Normal,No
+80,Female,Normal,Yes,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+41,Male,High,No,No,Moderate,Stable Angina,Normal,No,Negative,Normal,No
+85,Female,Low,No,No,High,Unstable Angina,ST Depression,yes,Not Done,Normal,Yes
+56,Female,High,Yes,No,High,Stable Angina,ST Depression,yes,Negative,Normal,Yes
+21,Female,Low,No,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+54,Male,Low,No,Yes,Moderate,Stable Angina,ST Elevation,No,Positive,Single Vessel Disease,Yes
+85,Female,High,No,Yes,High,Stable Angina,Normal,No,Not Done,Normal,Yes
+71,Male,Normal,Yes,Yes,Low,Stable Angina,Normal,No,Not Done,Normal,No
+69,Female,Low,Yes,No,Moderate,No Angina,Normal,yes,Not Done,Double Vessel Disease,Yes
+38,Female,Normal,No,No,High,No Angina,Normal,No,Negative,Normal,No
+43,Female,Low,No,No,Moderate,Stable Angina,Normal,No,Negative,Normal,No
+82,Female,Low,No,Yes,Moderate,Stable Angina,T-wave Inversion,No,Not Done,Normal,Yes
+85,Male,High,Yes,No,Low,Unstable Angina,Normal,yes,Positive,Double Vessel Disease,Yes
+26,Female,Low,Yes,No,High,No Angina,Normal,No,Not Done,Normal,No
+73,Male,High,Yes,Yes,High,Stable Angina,T-wave Inversion,yes,Not Done,Triple Vessel Disease,Yes
+32,Male,High,No,Yes,High,No Angina,Normal,No,Not Done,Normal,No
+63,Female,Low,Yes,Yes,Moderate,Unstable Angina,ST Depression,No,Not Done,Normal,Yes
+84,Female,Normal,Yes,No,High,Stable Angina,Normal,No,Not Done,Normal,No
+74,Female,Low,Yes,Yes,High,Stable Angina,Normal,No,Not Done,Double Vessel Disease,Yes
+85,Female,Normal,Yes,No,Moderate,No Angina,Normal,yes,Positive,Normal,Yes
+85,Female,Low,Yes,No,High,Stable Angina,ST Elevation,yes,Negative,Single Vessel Disease,Yes
+80,Female,Normal,No,Yes,Low,Stable Angina,ST Elevation,yes,Not Done,Normal,Yes
+85,Male,High,No,No,Moderate,No Angina,ST Elevation,yes,Positive,Normal,Yes
+49,Female,Normal,Yes,No,Low,Stable Angina,ST Depression,yes,Not Done,Normal,Yes
+53,Female,Normal,Yes,No,Low,Stable Angina,ST Depression,No,Negative,Single Vessel Disease,Yes
+64,Male,Normal,Yes,Yes,Low,Stable Angina,Normal,No,Negative,Normal,Yes
+85,Male,Normal,No,Yes,Moderate,Stable Angina,Normal,No,Not Done,Triple Vessel Disease,Yes
+85,Female,Low,No,Yes,Moderate,No Angina,Normal,No,Not Done,Normal,No
+79,Female,High,Yes,No,Moderate,Stable Angina,Normal,No,Negative,Normal,No
+34,Male,High,No,Yes,Moderate,Stable Angina,ST Depression,No,Positive,Triple Vessel Disease,Yes
+70,Male,Low,Yes,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+55,Female,High,Yes,Yes,Moderate,No Angina,Normal,No,Not Done,Normal,No
+85,Female,Low,Yes,Yes,Moderate,Stable Angina,Normal,yes,Not Done,Normal,Yes
+44,Male,Low,No,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,Yes
+55,Male,Normal,Yes,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+70,Male,High,No,No,Moderate,No Angina,ST Depression,No,Negative,Normal,Yes
+79,Male,High,No,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+60,Male,Low,Yes,Yes,Low,Stable Angina,Normal,No,Negative,Normal,No
+53,Female,Normal,No,Yes,Moderate,Stable Angina,Normal,No,Negative,Normal,No
+56,Female,Low,Yes,No,High,Unstable Angina,ST Depression,No,Not Done,Normal,Yes
+76,Female,High,Yes,Yes,Low,Stable Angina,Normal,No,Negative,Normal,Yes
+49,Female,Low,Yes,Yes,High,Stable Angina,Normal,No,Not Done,Normal,No
+85,Male,Low,Yes,Yes,High,Stable Angina,Normal,No,Not Done,Normal,No
+64,Male,High,Yes,No,High,Stable Angina,Normal,No,Negative,Normal,No
+37,Male,High,Yes,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+57,Female,High,Yes,No,High,Stable Angina,ST Elevation,No,Not Done,Triple Vessel Disease,Yes
+57,Male,High,Yes,No,Moderate,Stable Angina,Normal,No,Negative,Normal,No
+85,Male,High,Yes,No,Moderate,No Angina,Normal,No,Not Done,Normal,No
+60,Male,Low,Yes,Yes,Moderate,No Angina,Complete Heart Block,yes,Not Done,Normal,Yes
+81,Female,Low,Yes,Yes,Moderate,Stable Angina,Normal,No,Negative,Normal,No
+20,Female,Low,Yes,Yes,High,No Angina,Normal,No,Not Done,Normal,No
+62,Female,High,No,Yes,High,Stable Angina,Normal,No,Not Done,Normal,No
+72,Male,Normal,Yes,No,High,Stable Angina,Normal,No,Negative,Normal,Yes
+45,Female,Low,Yes,Yes,High,Stable Angina,ST Depression,No,Negative,Single Vessel Disease,Yes
+42,Male,High,Yes,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+85,Male,Low,Yes,No,Moderate,No Angina,Normal,yes,Not Done,Single Vessel Disease,Yes
+64,Female,High,Yes,Yes,Moderate,Stable Angina,Normal,No,Negative,Normal,Yes
+85,Male,Low,No,Yes,Moderate,Unstable Angina,Normal,No,Not Done,Normal,Yes
+20,Female,Low,No,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+85,Female,Low,Yes,No,Moderate,Stable Angina,Normal,yes,Not Done,Triple Vessel Disease,Yes
+68,Female,Low,No,Yes,Low,Stable Angina,Normal,No,Not Done,Normal,No
+49,Female,Low,Yes,Yes,Moderate,No Angina,Normal,No,Negative,Single Vessel Disease,Yes
+80,Female,Normal,No,No,Moderate,No Angina,Normal,No,Not Done,Normal,No
+85,Female,Low,Yes,Yes,Moderate,Stable Angina,Normal,No,Negative,Normal,No
+73,Male,Low,Yes,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+59,Male,High,Yes,No,High,Unstable Angina,T-wave Inversion,yes,Positive,Double Vessel Disease,Yes
+85,Male,Normal,No,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+44,Female,Low,Yes,No,Moderate,Stable Angina,ST Depression,No,Not Done,Single Vessel Disease,Yes
+50,Male,Normal,Yes,Yes,High,Stable Angina,Normal,No,Negative,Single Vessel Disease,Yes
+85,Male,Low,Yes,No,Moderate,Stable Angina,ST Depression,No,Negative,Single Vessel Disease,Yes
+85,Male,High,Yes,Yes,High,Stable Angina,T-wave Inversion,yes,Positive,Double Vessel Disease,Yes
+67,Male,Low,No,No,High,Stable Angina,ST Elevation,No,Not Done,Single Vessel Disease,Yes
+39,Female,High,Yes,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,Yes
+71,Female,High,Yes,Yes,Moderate,Unstable Angina,ST Elevation,No,Not Done,Normal,Yes
+20,Female,Low,Yes,No,High,Stable Angina,ST Elevation,No,Negative,Normal,Yes
+73,Female,Normal,No,No,High,Stable Angina,Normal,No,Negative,Normal,Yes
+78,Female,Low,No,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+85,Male,Low,Yes,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+82,Male,Low,Yes,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+51,Male,Low,No,No,High,No Angina,Normal,No,Negative,Normal,No
+85,Female,Low,Yes,No,Low,Stable Angina,Normal,No,Not Done,Normal,No
+66,Female,Normal,Yes,Yes,High,Stable Angina,Normal,No,Negative,Normal,No
+46,Male,Low,No,No,High,Stable Angina,Normal,No,Negative,Normal,No
+85,Female,Low,Yes,Yes,Moderate,No Angina,Normal,No,Negative,Normal,No
+80,Female,Low,Yes,Yes,Moderate,No Angina,Normal,No,Not Done,Normal,No
+85,Male,High,No,No,Moderate,No Angina,Normal,No,Not Done,Normal,No
+30,Female,Low,Yes,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+65,Male,Low,Yes,No,Moderate,No Angina,Normal,No,Negative,Normal,No
+80,Female,High,No,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+46,Female,Low,Yes,No,High,Stable Angina,Normal,No,Not Done,Normal,No
+61,Male,Low,No,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+62,Female,High,Yes,Yes,Low,Stable Angina,Complete Heart Block,yes,Not Done,Single Vessel Disease,Yes
+85,Male,Low,No,No,High,No Angina,ST Depression,No,Not Done,Normal,Yes
+80,Female,Low,Yes,No,High,Stable Angina,T-wave Inversion,No,Not Done,Normal,Yes
+81,Female,Low,No,No,High,Stable Angina,Normal,No,Not Done,Normal,No
+66,Female,High,No,Yes,High,Stable Angina,T-wave Inversion,No,Not Done,Normal,Yes
+85,Male,Normal,Yes,No,Moderate,Stable Angina,Normal,No,Negative,Normal,No
+85,Male,Normal,No,Yes,Moderate,No Angina,Normal,No,Not Done,Normal,No
+85,Female,High,Yes,Yes,Moderate,Stable Angina,ST Depression,yes,Not Done,Single Vessel Disease,Yes
+78,Male,Normal,Yes,Yes,High,No Angina,Normal,yes,Negative,Normal,Yes
+83,Female,Normal,Yes,Yes,Moderate,Stable Angina,ST Depression,No,Negative,Double Vessel Disease,Yes
+74,Male,Low,No,Yes,High,Stable Angina,Normal,No,Negative,Double Vessel Disease,Yes
+77,Male,Low,Yes,No,Moderate,No Angina,ST Depression,No,Positive,Normal,Yes
+42,Female,Low,Yes,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+83,Male,Normal,Yes,No,Moderate,Stable Angina,ST Depression,yes,Negative,Normal,Yes
+79,Female,Normal,No,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+85,Female,Low,No,Yes,Moderate,Stable Angina,Normal,yes,Negative,Normal,Yes
+83,Female,Low,Yes,No,Low,Stable Angina,Normal,yes,Not Done,Single Vessel Disease,Yes
+51,Female,Low,Yes,No,High,Stable Angina,Normal,No,Not Done,Normal,No
+85,Female,High,Yes,Yes,Low,Stable Angina,Normal,No,Not Done,Normal,No
+72,Female,Low,No,No,Low,No Angina,T-wave Inversion,yes,Positive,Single Vessel Disease,Yes
+33,Male,Low,Yes,Yes,High,Stable Angina,Normal,No,Negative,Normal,No
+57,Male,Low,Yes,No,High,No Angina,ST Depression,yes,Not Done,Single Vessel Disease,Yes
+65,Male,Normal,No,No,High,Stable Angina,Normal,No,Not Done,Normal,No
+85,Female,Low,Yes,Yes,High,No Angina,Normal,yes,Not Done,Normal,Yes
+85,Male,Normal,No,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+24,Male,Low,Yes,No,High,Stable Angina,Normal,No,Negative,Normal,No
+37,Female,High,Yes,Yes,Moderate,Stable Angina,Complete Heart Block,No,Not Done,Normal,Yes
+49,Female,High,Yes,Yes,Moderate,Stable Angina,Normal,No,Negative,Normal,No
+85,Female,High,Yes,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+85,Male,Normal,Yes,No,Low,Stable Angina,Normal,No,Not Done,Normal,No
+61,Male,Low,No,No,Moderate,Stable Angina,Normal,No,Not Done,Normal,No
+48,Male,Low,No,No,Moderate,Stable Angina,ST Elevation,No,Not Done,Normal,Yes
+64,Female,Normal,Yes,Yes,Low,Unstable Angina,ST Depression,No,Negative,Normal,Yes
+53,Female,Low,Yes,No,Low,Stable Angina,Complete Heart Block,yes,Not Done,Normal,Yes
+27,Female,Low,Yes,No,High,Stable Angina,ST Depression,yes,Not Done,Double Vessel Disease,Yes
+63,Female,Low,Yes,No,Low,No Angina,Normal,No,Not Done,Normal,No
+75,Female,Low,Yes,No,High,Unstable Angina,Normal,No,Positive,Normal,Yes
+51,Male,Low,Yes,Yes,Moderate,Stable Angina,ST Depression,No,Not Done,Single Vessel Disease,Yes
+43,Female,Low,Yes,No,Moderate,Unstable Angina,Normal,yes,Negative,Normal,Yes
+85,Female,Low,Yes,No,Moderate,No Angina,ST Depression,No,Positive,Single Vessel Disease,Yes
+49,Male,Normal,No,Yes,High,Stable Angina,Normal,No,Not Done,Normal,No
+84,Female,Low,No,No,Moderate,Stable Angina,Normal,No,Negative,Normal,No
+79,Female,High,No,No,Moderate,No Angina,Normal,No,Negative,Normal,No
+71,Female,Normal,No,No,Moderate,Stable Angina,ST Depression,No,Not Done,Single Vessel Disease,Yes
+65,Male,High,Yes,No,Low,No Angina,Normal,No,Not Done,Normal,No
+65,Female,High,Yes,Yes,High,Unstable Angina,Complete Heart Block,No,Not Done,Normal,Yes
+55,Female,Low,Yes,No,High,Stable Angina,Normal,No,Not Done,Normal,No
+75,Male,High,Yes,Yes,Moderate,Stable Angina,ST Depression,yes,Not Done,Single Vessel Disease,Yes
+23,Female,High,No,Yes,High,No Angina,Normal,No,Not Done,Normal,No
+30,Female,Low,Yes,Yes,High,No Angina,Normal,No,Not Done,Normal,No
+25,Female,Low,Yes,Yes,High,No Angina,Normal,No,Not Done,Normal,No
+85,Male,High,Yes,No,High,Stable Angina,Normal,No,Negative,Normal,No
+78,Female,Low,Yes,No,Moderate,Unstable Angina,ST Depression,yes,Not Done,Normal,Yes
+81,Female,Low,Yes,No,Moderate,Stable Angina,ST Depression,yes,Negative,Normal,Yes
+29,Male,Normal,Yes,Yes,High,Stable Angina,ST Depression,No,Not Done,Triple Vessel Disease,Yes
+81,Female,Low,No,Yes,Moderate,No Angina,Normal,No,Negative,Normal,No
+85,Male,Low,Yes,Yes,Moderate,Stable Angina,ST Elevation,No,Positive,Double Vessel Disease,Yes
+76,Female,Normal,Yes,Yes,High,Unstable Angina,ST Elevation,No,Not Done,Single Vessel Disease,Yes
+75,Female,Normal,Yes,Yes,High,Stable Angina,Normal,No,Negative,Normal,No
+20,Female,High,Yes,No,Low,No Angina,Normal,No,Negative,Normal,No
+80,Female,Low,No,Yes,High,No Angina,ST Depression,No,Not Done,Normal,Yes
+46,Male,Low,No,No,Moderate,No Angina,Normal,No,Not Done,Normal,No
+55,Male,Normal,No,No,Moderate,Stable Angina,ST Elevation,No,Not Done,Triple Vessel Disease,Yes
+81,Male,High,No,Yes,Moderate,Stable Angina,Normal,No,Not Done,Normal,Yes
+66,Male,Normal,Yes,No,Low,Stable Angina,ST Elevation,yes,Positive,Normal,Yes
+85,Female,High,Yes,Yes,High,Stable Angina,Normal,No,Not Done,Normal,Yes
+85,Female,Low,Yes,No,High,Stable Angina,Normal,No,Negative,Normal,No
+80,Female,Low,Yes,No,Moderate,Stable Angina,Normal,No,Negative,Normal,No
+85,Male,High,Yes,Yes,Low,Stable Angina,ST Elevation,yes,Not Done,Double Vessel Disease,Yes

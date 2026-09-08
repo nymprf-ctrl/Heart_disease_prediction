@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlRoot" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='heart_disease_icon.png') }}">
+   <title>Patient</title>
+
+  <script>
+    if (localStorage.getItem('cs-pt-theme') === 'dark')
+      document.documentElement.classList.add('dark');
+  </script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/patient.css') }}" />
+</head>
+
+<body>
+
+  <div class="topbar">
+    <a href="/" class="logo">
+      <div class="logo-pulse-wrap">
+        <div class="logo-box">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M12 21C10.5 19.5 8 17.5 6 15.5C4 13.5 2.5 11 2.5 8.5C2.5 6 4.3 4.2 6.8 4.2C8.2 4.2 9.5 4.9 10.5 6C10.5 5 11.2 4.3 12.2 4C12.8 3.8 13.8 4 14.5 4.8C16 4 18 4.5 19.5 5.8C21 7.2 21.5 9.8 20.5 12.5C19.5 15.5 16.5 18.5 12 21Z"
+              fill="rgba(255,255,255,0.95)" />
+            <path d="M10.5 6C9.5 4.2 10 2.8 11.5 2.3C12.5 2 13.2 2.5 13 4" stroke="rgba(255,255,255,0.92)"
+              stroke-width="1.7" stroke-linecap="round" fill="none" />
+            <path d="M14.5 4.8C15 3.4 16.2 3 17.2 3.7" stroke="rgba(255,255,255,0.72)" stroke-width="1.2"
+              stroke-linecap="round" fill="none" />
+          </svg>
+        </div>
+      </div>
+      <span class="logo-name">Cardio<em>Sense</em></span>
+    </a>
+    <div class="topbar-right">
+      <button class="theme-btn-el" id="themeBtn" onclick="toggleTheme()" data-tooltip="Switch to dark"
+        aria-label="Toggle theme">
+        <i class="bi bi-moon-fill" id="themeIcon"></i>
+      </button>
+      <button class="lang-toggle" id="langBtn" onclick="toggleLang()">
+        <span id="langFlag">🇵🇰</span>
+        <span id="langLbl">اردو</span>
+      </button>
+      <a href="/" class="back-btn">
+        <i class="bi bi-arrow-left"></i>
+        <span id="backTxt">Back</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="progress-wrap" id="progressWrap">
+    <div class="progress-track">
+      <div class="progress-fill" id="progFill" style="width:0%;"></div>
+    </div>
+    <div class="progress-text">
+      <span id="progStep">Question 1 of 7</span>
+      <span id="progPct">0%</span>
+    </div>
+    <div class="step-dots" id="stepDots">
+      <div class="dot active" id="dot0"></div>
+      <div class="dot" id="dot1"></div>
+      <div class="dot" id="dot2"></div>
+      <div class="dot" id="dot3"></div>
+      <div class="dot" id="dot4"></div>
+      <div class="dot" id="dot5"></div>
+      <div class="dot" id="dot6"></div>
+    </div>
+  </div>
+
+  <div class="app-card">
+
+    <div id="wizard">
+
+      <div class="slide active" id="slide-0">
+        <div class="q-header">
+          <span class="q-emoji">🎂</span>
+          <div class="q-num" id="qn0">Question 1 / 7</div>
+          <div class="q-text" id="qt0">How old are you?</div>
+          <div class="q-hint" id="qh0">Use + and − buttons to set your age</div>
+        </div>
+        <div class="age-wrap">
+          <div class="age-stepper">
+            <button class="step-btn" onclick="changeAge(-1)" type="button">−</button>
+            <div class="age-display" id="ageDisplay">25</div>
+            <button class="step-btn" onclick="changeAge(1)" type="button">+</button>
+          </div>
+          <span class="age-unit" id="ageUnit">years old</span>
+          <div style="margin-top:10px;">
+            <input type="number" id="ageTyped" class="age-input" min="1" max="120" value="25"
+              oninput="syncAgeFromInput()" />
+            <div style="font-size:.73rem;font-weight:700;color:var(--dim);margin-top:5px;" id="typeHint">
+              Or type your age above
+            </div>
+          </div>
+        </div>
+        <div class="nav-row">
+          <button class="btn-next" onclick="nextSlide(0)" id="btn0">
+            <span id="nextTxt0">Next</span> <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="slide" id="slide-1">
+        <div class="q-header">
+          <span class="q-emoji">👤</span>
+          <div class="q-num" id="qn1">Question 2 / 7</div>
+          <div class="q-text" id="qt1">Are you male or female?</div>
+          <div class="q-hint" id="qh1">Tap one to select</div>
+        </div>
+        <div class="choices" id="choices-sex">
+          <button class="choice-btn" onclick="choose('sex','1','sel-blue',this)" type="button">
+            <span class="choice-icon">👨</span>
+            <div class="choice-text-wrap">
+              <div class="choice-main" id="sex-m">Male</div>
+              <div class="choice-sub" id="sex-mu">مرد</div>
+            </div>
+            <div class="choice-check">✓</div>
+          </button>
+          <button class="choice-btn" onclick="choose('sex','0','sel-blue',this)" type="button">
+            <span class="choice-icon">👩</span>
+            <div class="choice-text-wrap">
+              <div class="choice-main" id="sex-f">Female</div>
+              <div class="choice-sub" id="sex-fu">عورت</div>
+            </div>
+            <div class="choice-check">✓</div>
+          </button>
+        </div>
+        <div class="nav-row">
+          <button class="btn-prev" onclick="prevSlide(1)" type="button">
+            <i class="bi bi-arrow-left"></i> <span id="prevTxt1">Back</span>
+          </button>
+          <button class="btn-next" onclick="nextSlide(1)" id="btn1" disabled>
+            <span id="nextTxt1">Next</span> <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+  
+      <div class="slide" id="slide-2">
+        <div class="q-header">
+          <span class="q-emoji">🩺</span>
+          <div class="q-num" id="qn2">Question 3 / 7</div>
+          <div class="q-text" id="qt2">How is your blood pressure?</div>
+          <div class="q-hint" id="qh2">Your doctor may have told you. Not sure? Pick Normal.</div>
+        </div>
+        <div class="choices" id="choices-bp">
+          <button class="choice-btn" onclick="choose('bp','0','sel-green',this)" type="button">
+            <span class="choice-icon">✅</span>
+            <div class="choice-text-wrap">
+              <div class="choice-main" id="bp0e">Normal blood pressure</div>
+              <div class="choice-sub" id="bp0u">نارمل بلڈ پریشر</div>
+            </div>
+            <div class="choice-check">✓</div>
+          </button>
+          <button class="choice-btn" onclick="choose('bp','1','sel-orange',this)" type="button">
+            <span class="choice-icon">⬇️</span>
+            <div class="choice-text-wrap">
+              <div class="choice-main" id="bp1e">Low blood pressure</div>
+              <div class="choice-sub" id="bp1u">کم بلڈ پریشر — چکر آنا، کمزوری</div>
+            </div>
+            <div class="choice-check">✓</div>
+          </button>
+          <button class="choice-btn" onclick="choose('bp','2','sel-red',this)" type="button">
+            <span class="choice-icon">⬆️</span>
+            <div class="choice-text-wrap">
+              <div class="choice-main" id="bp2e">High blood pressure</div>
+              <div class="choice-sub" id="bp2u">ہائی بلڈ پریشر — ڈاکٹر نے بتایا ہو</div>
+            </div>
+            <div class="choice-check">✓</div>
+          </button>
+        </div>
+        <div class="nav-row">
+          <button class="btn-prev" onclick="prevSlide(2)" type="button">
+            <i class="bi bi-arrow-left"></i> <span id="prevTxt2">Back</span>
+          </button>
+          <button class="btn-next" onclick="nextSlide(2)" id="btn2" disabled>
+            <span id="nextTxt2">Next</span> <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+
+      <div class="slide" id="slide-3">
+        <div class="q-header">
+          <span class="q-emoji">🍬</span>
+          <div class="q-num" id="qn3">Question 4 / 7</div>
+          <div class="q-text" id="qt3">Do you have sugar disease?</div>
+          <div class="q-hint" id="qh3">Also called "diabetes" or "شوگر کی بیماری"</div>
+        </div>
+        <div class="choices" id="choices-diab">
+          <button class="choice-btn" onclick="choose('diab','1','sel-red',this)" type="button">
+            <span class="choice-icon">✅</span>
+            <div class="choice-text-wrap">
+              <div class="choice-main" id="diab1e">Yes, I have it</div>
+              <div class="choice-sub" id="diab1u">ہاں، مجھے شوگر ہے</div>
+            </div>
+            <div class="choice-check">✓</div>
+          </button>
+          <button class="choice-btn" onclick="choose('diab','0','sel-green',this)" type="button">
+            <span class="choice-icon">❌</span>
+            <div class="choice-text-wrap">
+              <div class="choice-main" id="diab0e">No, I don't</div>
+              <div class="choice-sub" id="diab0u">نہیں، مجھے نہیں</div>
+            </div>
+            <div class="choice-check">✓</div>
+          </button>
+        </div>
+        <div class="nav-row">
+          <button class="btn-prev" onclick="prevSlide(3)" type="button">
+            <i class="bi bi-arrow-left"></i> <span id="prevTxt3">Back</span>
+          </button>
+          <button class="btn-next" onclick="nextSlide(3)" id="btn3" disabled>
+            <span id="nextTxt3">Next</span> <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="slide" id="slide-4">
+        <div class="q-header">
+          <span class="q-emoji">👨‍👩‍👧‍👦</span>
+          <div class="q-num" id="qn4">Question 5 / 7</div>
+          <div class="q-text" id="qt4">Heart disease in your family?</div>
+          <div class="q-hint" id="qh4">Father, mother, brother or sister — did they have a heart attack?</div>
+        </div>
+        <div class="choices" id="choices-fh">
+          <button class="choice-btn" onclick="choose('fh','1','sel-red',this)" type="button">
+            <span class="choice-icon">✅</span>
+            <div class="choice-text-wrap">
+              <div class="choice-main" id="fh1e">Yes, in my family</div>
+              <div class="choice-sub" id="fh1u">ہاں، خاندان میں ہے</div>
+            </div>
+            <div class="choice-check">✓</div>
+          </button>
+          <button class="choice-btn" onclick="choose('fh','0','sel-green',this)" type="button">
+            <span class="choice-icon">❌</span>
+            <div class="choice-text-wrap">
+              <div class="choice-main" id="fh0e">No / Not sure</div>
+              <div class="choice-sub" id="fh0u">نہیں / معلوم نہیں</div>
+            </div>
+            <div class="choice-check">✓</div>
+          </button>
+        </div>
+        <div class="nav-row">
+          <button class="btn-prev" onclick="prevSlide(4)" type="button">
+            <i class="bi bi-arrow-left"></i> <span id="prevTxt4">Back</span>
+          </button>
+          <button class="btn-next" onclick="nextSlide(4)" id="btn4" disabled>
+            <span id="nextTxt4">Next</span> <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="slide" id="slide-5">
+        <div class="q-header">
+          <span class="q-emoji">🏃</span>
+          <div class="q-num" id="qn5">Question 6 / 7</div>
+          <div class="q-text" id="qt5">How much do you move in a day?</div>
+          <div class="q-hint" id="qh5">Walking, working, daily exercise — how active are you?</div>
+        </div>
+        <div class="choices" id="choices-act">
+          <button class="choice-btn" onclick="choose('act','0','sel-red',this)" type="button">
+            <span class="choice-icon">🛋️</span>
+            <div class="choice-text-wrap">
+              <div class="choice-main" id="act0e">Not very active</div>
+              <div class="choice-sub" id="act0u">زیادہ نہیں چلتے — بیٹھے رہتے ہیں</div>
+            </div>
+            <div class="choice-check">✓</div>
+          </button>
+          <button class="choice-btn" onclick="choose('act','1','sel-orange',this)" type="button">
+            <span class="choice-icon">🚶</span>
+            <div class="choice-text-wrap">
+              <div class="choice-main" id="act1e">Somewhat active</div>
+              <div class="choice-sub" id="act1u">کچھ چلتے ہیں — ہلکا پھلکا کام کرتے ہیں</div>
+            </div>
+            <div class="choice-check">✓</div>
+          </button>
+          <button class="choice-btn" onclick="choose('act','2','sel-green',this)" type="button">
+            <span class="choice-icon">🏃</span>
+            <div class="choice-text-wrap">
+              <div class="choice-main" id="act2e">Very active</div>
+              <div class="choice-sub" id="act2u">بہت متحرک — باقاعدگی سے ورزش یا محنت</div>
+            </div>
+            <div class="choice-check">✓</div>
+          </button>
+        </div>
+        <div class="nav-row">
+          <button class="btn-prev" onclick="prevSlide(5)" type="button">
+            <i class="bi bi-arrow-left"></i> <span id="prevTxt5">Back</span>
+          </button>
+          <button class="btn-next" onclick="nextSlide(5)" id="btn5" disabled>
+            <span id="nextTxt5">Next</span> <i class="bi bi-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="slide" id="slide-6">
+        <div class="q-header">
+          <span class="q-emoji">💗</span>
+          <div class="q-num" id="qn6">Question 7 / 7</div>
+          <div class="q-text" id="qt6">Do you feel chest pain?</div>
+          <div class="q-hint" id="qh6">Pick what feels most like you</div>
+        </div>
+        <div class="choices" id="choices-cp">
+          <button class="choice-btn" onclick="choose('cp','0','sel-green',this)" type="button">
+            <span class="choice-icon">😊</span>
+            <div class="choice-text-wrap">
+              <div class="choice-main" id="cp0e">No chest pain</div>
+              <div class="choice-sub" id="cp0u">سینے میں کوئی درد نہیں — بالکل ٹھیک ہوں</div>
+            </div>
+            <div class="choice-check">✓</div>
+          </button>
+          <button class="choice-btn" onclick="choose('cp','1','sel-orange',this)" type="button">
+            <span class="choice-icon">😐</span>
+            <div class="choice-text-wrap">
+              <div class="choice-main" id="cp1e">Pain when I work or walk fast</div>
+              <div class="choice-sub" id="cp1u">کام یا تیز چلنے پر سینہ تنگ — آرام سے ٹھیک</div>
+            </div>
+            <div class="choice-check">✓</div>
+          </button>
+          <button class="choice-btn" onclick="choose('cp','2','sel-red',this)" type="button">
+            <span class="choice-icon">😰</span>
+            <div class="choice-text-wrap">
+              <div class="choice-main" id="cp2e">Sudden or scary chest pain</div>
+              <div class="choice-sub" id="cp2u">اچانک شدید درد — آرام میں بھی آتا ہے</div>
+            </div>
+            <div class="choice-check">✓</div>
+          </button>
+        </div>
+        <div class="nav-row">
+          <button class="btn-prev" onclick="prevSlide(6)" type="button">
+            <i class="bi bi-arrow-left"></i> <span id="prevTxt6">Back</span>
+          </button>
+          <button class="btn-next" onclick="goToSummary()" id="btn6" disabled>
+            <span id="nextTxt6">Review Answers</span> <i class="bi bi-list-check"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="slide" id="slide-sum">
+        <div class="summary-header">
+          <span class="sum-emoji">📋</span>
+          <div class="sum-title" id="sumTitle">Check Your Answers</div>
+          <div class="sum-sub" id="sumSub">Make sure everything is correct</div>
+        </div>
+
+        <div class="summary-list">
+          <div class="sum-row">
+            <span class="sum-q" id="sq-age">Age</span>
+            <span class="sum-a" id="sa-age">—</span>
+          </div>
+          <div class="sum-row">
+            <span class="sum-q" id="sq-sex">Sex</span>
+            <span class="sum-a" id="sa-sex">—</span>
+          </div>
+          <div class="sum-row">
+            <span class="sum-q" id="sq-bp">Blood Pressure</span>
+            <span class="sum-a" id="sa-bp">—</span>
+          </div>
+          <div class="sum-row">
+            <span class="sum-q" id="sq-diab">Sugar Disease</span>
+            <span class="sum-a" id="sa-diab">—</span>
+          </div>
+          <div class="sum-row">
+            <span class="sum-q" id="sq-fh">Family Heart Disease</span>
+            <span class="sum-a" id="sa-fh">—</span>
+          </div>
+          <div class="sum-row">
+            <span class="sum-q" id="sq-act">Daily Activity</span>
+            <span class="sum-a" id="sa-act">—</span>
+          </div>
+          <div class="sum-row">
+            <span class="sum-q" id="sq-cp">Chest Pain</span>
+            <span class="sum-a" id="sa-cp">—</span>
+          </div>
+        </div>
+
+        <div class="privacy-note">
+          <i class="bi bi-shield-lock-fill" style="font-size:1.05rem;flex-shrink:0;margin-top:1px;"></i>
+          <span id="privacyTxt">🔒 Your answers are private and not saved anywhere.</span>
+        </div>
+
+        <form id="ptForm" method="POST" action="/predict_patient">
+          <input type="hidden" name="age" id="f_age" />
+          <input type="hidden" name="sex" id="f_sex" />
+          <input type="hidden" name="BP" id="f_bp" />
+          <input type="hidden" name="diabetes" id="f_diab" />
+          <input type="hidden" name="fhist" id="f_fh" />
+          <input type="hidden" name="act" id="f_act" />
+          <input type="hidden" name="cp" id="f_cp" />
+          <button type="submit" class="btn-submit" id="submitBtn">
+            <i class="bi bi-heart-pulse-fill"></i>
+            <span id="submitTxt">Get My Result</span>
+            <span class="spinner-border spinner-border-sm d-none" id="subSpin"></span>
+          </button>
+        </form>
+
+        <div class="nav-row" style="padding-top:6px;">
+          <button onclick="goToSlide(6)" style="flex:1;background:transparent;border:none;
+                       font-family:'Nunito',Arial,sans-serif;font-size:.82rem;
+                       font-weight:800;color:var(--muted);cursor:pointer;padding:6px;" type="button" id="editBtn">
+            ✏️ <span>Edit Answers</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="slide" id="slide-result">
+        <div class="result-screen active" id="resultScreen">
+
+          {% if error %}
+          <div class="err-box">
+            <i class="bi bi-exclamation-triangle-fill"></i> {{ error }}
+          </div>
+          {% endif %}
+
+          <div class="result-card" id="resultCard">
+            <span class="result-big-icon" id="r-icon">❤️</span>
+            <div class="result-title" id="r-title">Checking...</div>
+            <div class="result-msg" id="r-msg"></div>
+            <div class="prob-row">
+              <span class="prob-chip pc-yes" id="r-pyes"></span>
+              <span class="prob-chip pc-no" id="r-pno"></span>
+            </div>
+            <div class="conf-wrap">
+              <div class="conf-label">
+                <span id="confLbl">Heart Disease Risk</span>
+                <span id="confPct"></span>
+              </div>
+              <div class="conf-track">
+                <div class="conf-fill" id="confBar" style="width:0%;"></div>
+              </div>
+            </div>
+            <div class="rec-box" id="recBox"></div>
+          </div>
+
+          <div class="result-actions">
+            <button class="btn-restart" onclick="restartAll()" type="button">
+              <i class="bi bi-arrow-counterclockwise"></i>
+              <span id="restartTxt">Check Again</span>
+            </button>
+            <a href="/" class="btn-home">
+              <i class="bi bi-house-fill"></i>
+              <span id="homeTxt">Back to Home</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- /wizard -->
+
+  </div><!-- /app-card -->
+
+
+  {% if prediction is defined %}
+  <script>
+    var PATIENT_RESULT = {
+      prediction: {{ prediction }},
+      confidence: {{ confidence }},
+      prob_yes: {{ prob_yes }},
+      prob_no: {{ prob_no }}
+    };
+  </script>
+  {% endif %}
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='js/patient.js') }}"></script>
+</body>
+
+</html>
